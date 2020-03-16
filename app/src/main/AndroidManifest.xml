@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="help.covid19italia">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,7 @@
         android:theme="@style/AppTheme" >
 
         <activity
-            android:name="com.google.androidbrowserhelper.trusted.LauncherActivity"
+            android:name=".CovidLauncherActivity"
             android:label="${launcherName}">
 
             <meta-data
@@ -34,6 +36,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".WebViewFallbackActivity"
+            android:configChanges="orientation|screenSize" />
+
+
         <service
             android:name="com.google.androidbrowserhelper.trusted.DelegationService"
             android:enabled="true"
@@ -49,4 +55,5 @@
             android:name="asset_statements"
             android:value="${assetStatements}" />
     </application>
+
 </manifest>
