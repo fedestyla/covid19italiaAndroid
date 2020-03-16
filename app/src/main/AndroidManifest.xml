@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme" >
 
         <activity
-            android:name="android.support.customtabs.trusted.LauncherActivity"
+            android:name="com.google.androidbrowserhelper.trusted.LauncherActivity"
             android:label="${launcherName}">
 
             <meta-data
@@ -33,6 +33,17 @@
                     android:host="${hostName}"/>
             </intent-filter>
         </activity>
+
+        <service
+            android:name="com.google.androidbrowserhelper.trusted.DelegationService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.support.customtabs.trusted.TRUSTED_WEB_ACTIVITY_SERVICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </service>
 
         <meta-data
             android:name="asset_statements"
