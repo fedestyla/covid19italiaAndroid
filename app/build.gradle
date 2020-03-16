@@ -18,7 +18,7 @@ android {
                 defaultUrl: "https://www.covid19italia.help",
                 launcherName: "Covid19Italia",
                 assetStatements: '[{ "relation": ["delegate_permission/common.handle_all_urls"], ' +
-                        '"target": {"namespace": "web", "site": "https://wordguru.netguru.com"}}]'
+                        '"target": {"namespace": "web", "site": "https://www.covid19italia.help"}}]'
         ]
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
